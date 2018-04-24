@@ -170,31 +170,31 @@
           <div class="subheading mb-3">Principales Lenguajes de Programación y Herramientas:</div>
           <ul class="list-inline list-icons">
             <li class="list-inline-item">
-              <i class="devicons devicons-android"></i>
+              <i class="devicons devicons-android" data-toggle="tooltip" title="Android"></i>
             </li>
             <li class="list-inline-item">
-              <i class="devicons devicons-java"></i>
+              <i class="devicons devicons-java" data-toggle="tooltip" title="Java"></i>
             </li>
             <li class="list-inline-item">
-              <i class="devicons devicons-nodejs_small"></i>
+              <i class="devicons devicons-nodejs_small" data-toggle="tooltip" title="Node.js"></i>
             </li>
             <li class="list-inline-item">
-              <i class="devicons devicons-database"></i>
+              <i class="devicons devicons-database" data-toggle="tooltip" title="Bases de datos (SQL)"></i>
             </li>
             <li class="list-inline-item">
-              <i class="devicons devicons-git"></i>
+              <i class="devicons devicons-git" data-toggle="tooltip" title="Git"></i>
             </li>
             <li class="list-inline-item">
-              <i class="devicons devicons-html5"></i>
+              <i class="devicons devicons-html5" data-toggle="tooltip" title="HTML5"></i>
             </li>
             <li class="list-inline-item">
-              <i class="devicons devicons-css3"></i>
+              <i class="devicons devicons-css3" data-toggle="tooltip" title="CSS"></i>
             </li>
             <li class="list-inline-item">
-              <i class="devicons devicons-bootstrap"></i>
+              <i class="devicons devicons-bootstrap" data-toggle="tooltip" title="Bootstrap 4"></i>
             </li>
             <li class="list-inline-item">
-              <i class="devicons devicons-javascript"></i>
+              <i class="devicons devicons-javascript" data-toggle="tooltip" title="JavaScript"></i>
             </li>
           </ul>
 
@@ -253,6 +253,11 @@
     <!-- Custom scripts for this template -->
     <script src="js/resume.min.js"></script>
 
+    <script>
+      $(document).ready(function() {
+        $('[data-toggle="tooltip"]').tooltip();   
+      });
+    </script>
   </body>
 
 </html>
