@@ -72,7 +72,7 @@
             <a href="mailto:edgardo.barriam@gmail.com">edgardo.barriam@gmail.com</a>
           • (+569) 85082511
           </div>
-          <p class="mb-3">¡Hola! Me llamo Edgardo Barría, soy programador y actualmente tengo 21 años, de los cuales llevo 4 introducido en el mundo del software. Nací y me crié en el sur de Chile, en Puerto Montt, donde pasé los primeros 17 años de mi vida. A los 18 comencé a estudiar mi primera carrera universitaria en Concepción, donde pasé 3 años. Allí fue donde inicié mi formación como profesional de las Tecnologías de Información. Actualmente me encuentro estudiando de forma independiente, aprendiendo sobre nuevas tecnologías y a la vez desarrollando proyectos personales , lo cual ha resultado muy fructífero y apasionante.</p>
+          <p class="mb-3">¡Hola! Me llamo Edgardo Barría, soy programador y actualmente tengo <span id="myAge">21</span> años, de los cuales llevo 4 introducido en el mundo del software. Nací y me crié en el sur de Chile, en Puerto Montt, donde pasé los primeros 17 años de mi vida. A los 18 comencé a estudiar mi primera carrera universitaria en Concepción, donde pasé 3 años. Allí fue donde inicié mi formación como profesional de las Tecnologías de Información. Actualmente me encuentro estudiando de forma independiente, aprendiendo sobre nuevas tecnologías y a la vez desarrollando proyectos personales , lo cual ha resultado muy fructífero y apasionante.</p>
           <p class="mb-5">Al ser testigo de cómo las Tecnologías de la Información han ocupado un espacio importante en la sociedad, veo una gran oportunidad para utilizar estas tecnologías a fin de crear proyectos comerciales o bien presentar iniciativas que entreguen un aporte significativo a nuestras vidas.</p>
           <ul class="list-inline list-social-icons mb-0">
             <li class="list-inline-item">
@@ -257,6 +257,13 @@
       $(document).ready(function() {
         $('[data-toggle="tooltip"]').tooltip();   
       });
+
+      $('#myAge').html(calcAge('1996-12-02') );
+
+      function calcAge(dateString) {
+        var birthday = +new Date(dateString);
+        return ~~((Date.now() - birthday) / (31557600000));
+      }
     </script>
   </body>
 
